@@ -23,6 +23,9 @@ The final source update data matches the local contract byte for byte. Code upda
 | frontend release | FINALIZED / SUCCESS | [0x98575d1398…](https://explorer-studio.genlayer.com/tx/0x98575d139806938c3e1a36acbd5d7ad5461e33f1870c41e0e098c9a692702198) |
 | challenge | FINALIZED / SUCCESS | [0xab7447a711…](https://explorer-studio.genlayer.com/tx/0xab7447a71116a50d26798af88a1920bcc9dde524d622aae2cbc7f311ffb6a471) |
 
+| frontend assessment | FINALIZED / SUCCESS | [0x298e4472a9…](https://explorer-studio.genlayer.com/tx/0x298e4472a9112d9029eb22c7dfadce95f8f4d67eb2607f7d42a9f08f498376fb) |
+| rejected duplicate | FINALIZED / ERROR | [0xbfb4c2b6f8…](https://explorer-studio.genlayer.com/tx/0xbfb4c2b6f8081663bcb886775a157a3531739efc3643e39452761362891450ad) |
+
 Full transaction hashes, signing addresses, Full Consensus execution modes and validator votes are in `verified-transactions.json`. The built-in Studio account is `0xcD1305217298eB7a99696EEAB7f5a46b9dE2E441`; the disposable frontend session account is a separate test signer.
 
 ## Observed outcome
@@ -51,3 +54,20 @@ The live RPC/SDK behavior was checked against the hosted runtime. Current docume
 ## Preserved failed run
 
 The initial assessment `0x8f41818e7b320984d131e702b8b6bb6cc0d9a245f954200383f952207af9fc9b` exhausted consensus rotations, left no report committed, and is retained as a failure artifact. It is not counted as successful on-chain evidence.
+
+## Additional browser verification
+
+The independent frontend case `httpx-mvrud4gx` completed registration, release submission and assessment with `FINALIZED / SUCCESS`, returning `BREAKING_CHANGE`. A deliberate duplicate registration finalized with `ERROR` and was correctly treated as failure despite protocol finalization. Resuming its existing hash updated tracking without sending another write.
+
+## Public website release
+
+The final website deployment succeeded at https://releasescope.keenbasil9.chatgpt.site. Published source commit in the hosting repository: `96e4cde435170a3e621bf2a447ee1977a08fe58c`; saved version 3. The hosting source history and GitHub mirror have different commit identities but the same application/contract source files. GitHub contains the additional post-publication screenshots and evidence documentation.
+
+GitHub Actions passed for implementation commit `cbfe22875e43fe6c217e4469d14eaf390e8b18b5`: [validation run](https://github.com/haris4587/ReleaseScope/actions/runs/40657171489). The final evidence commit also triggers validation.
+
+Screenshots:
+
+- [Public ReleaseScope overview](screenshots/release-scope-overview.jpg)
+- [Finalized impact assessment in the Studio explorer](screenshots/finalized-assessment.jpg)
+- [Successful and rejected transaction lifecycle](screenshots/transaction-lifecycle.jpg)
+- [Finalized report and migration recommendation](screenshots/release-scope-report.jpg)

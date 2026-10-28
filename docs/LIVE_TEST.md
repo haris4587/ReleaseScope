@@ -17,3 +17,15 @@ Observed actions:
 The frontend session is intentionally distinct from the Studio built-in account; it uses the same SDK local-account signing mechanism. No Studio storage was inspected, and no private key was embedded in source, receipts or website assets.
 
 Final challenge, failure-path, resume/export and published-version verification results are recorded in EVIDENCE.md and the machine-readable transaction evidence. See SECURITY.md for scope and simulator limitations.
+
+Completed final checks:
+
+- Direct frontend `assess_impact` finalized with successful execution and stored `BREAKING_CHANGE` for the separate browser case.
+- Reference challenge finalized successfully, retaining the verdict and adding concrete `proxy=` migration guidance in revision 2.
+- Deliberate duplicate registration finalized with `ERROR`; the interface displayed failure and preserved its hash.
+- Resumed tracking of the existing failed hash without submitting another transaction.
+- Live verifier passed all recorded transaction checks, source matching, report fingerprints and both report hash links.
+- Reloaded the final published website: the signer cleared, transaction history persisted, and the contract status read two registered releases.
+- Confirmed the canonical explorer transaction URL shows `FINALIZED`, `SUCCESS`, Normal execution mode, five initial validators, decoded `assess_impact` input and the stored breaking-change report.
+- Fixed the initial Blob URL revocation timing issue. Exported JSON from the published app, read the downloaded file, and confirmed exact parsed-object equality with the independently retrieved finalized report (two revisions).
+- Captured final public overview/report screenshots and the finalized explorer transaction. Desktop layout was visually inspected; mobile CSS breakpoints are implemented but a separate mobile browser run was not performed.

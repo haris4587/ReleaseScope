@@ -82,5 +82,35 @@
       "0xb04cdDC4a6Ff6A0aDF715cfe00Fa307b901cebD4": "disagree"
     },
     "executionMode": "NORMAL"
+  },
+  "frontend_assessment": {
+    "hash": "0x298e4472a9112d9029eb22c7dfadce95f8f4d67eb2607f7d42a9f08f498376fb",
+    "status": "FINALIZED",
+    "sender": "0x397cc8EAbD4754E82Dd30f06b333d145D4A9EECC",
+    "execution": "SUCCESS",
+    "votes": {
+      "0x045291B293B9D68969c18B6637A8258038cf787A": "agree",
+      "0x0eb3859451817bC25Cc717D4F676D54D0D3aD0aE": "disagree",
+      "0x4441Ebe37E72c039B73f1D6CF8C6DEe277FE547a": "agree",
+      "0x4619C8420D50c9dE477DB2CBb7b4863A041688CB": "disagree",
+      "0x5e84e17266a193077728229751aC8A1dD24be146": "agree"
+    },
+    "executionMode": "NORMAL",
+    "expectedFailure": false
+  },
+  "rejected_duplicate": {
+    "hash": "0xbfb4c2b6f8081663bcb886775a157a3531739efc3643e39452761362891450ad",
+    "status": "FINALIZED",
+    "sender": "0x397cc8EAbD4754E82Dd30f06b333d145D4A9EECC",
+    "execution": "ERROR",
+    "votes": {
+      "0x007d6451555Df7765c707284F844137927aE4e5E": "agree",
+      "0x045291B293B9D68969c18B6637A8258038cf787A": "agree",
+      "0x5847AF34a4e5bA96490f8c883598f68EC9B0B907": "idle",
+      "0xF7D08d12dB37D3e02D1833b5cB7e56B07F114186": "agree",
+      "0xb04cdDC4a6Ff6A0aDF715cfe00Fa307b901cebD4": "agree"
+    },
+    "executionMode": "NORMAL",
+    "expectedFailure": true
   }
 }
