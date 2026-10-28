@@ -1,0 +1,148 @@
+[
+  {
+    "challenge_reason": "",
+    "challenger": "0xcD1305217298eB7a99696EEAB7f5a46b9dE2E441",
+    "decision": {
+      "affected_symbols": [
+        "httpx.Client",
+        "proxies"
+      ],
+      "citations": [
+        {
+          "quote": "httpx==0.27.2",
+          "source": "manifest"
+        },
+        {
+          "quote": "import httpx",
+          "source": "usage"
+        },
+        {
+          "quote": "with httpx.Client(proxies=\"http://localhost:8080\") as client:",
+          "source": "usage"
+        },
+        {
+          "quote": "## 0.28.0 (28th November, 2024)",
+          "source": "release"
+        },
+        {
+          "quote": "* The deprecated `proxies` argument has now been removed.",
+          "source": "release"
+        }
+      ],
+      "evidence": {
+        "manifest": {
+          "sha256": "eda181fb9517c0421c72a0934b6f88916c810492e6742b01a380748c91ac5377",
+          "url": "https://raw.githubusercontent.com/haris4587/ReleaseScope/97c856d24d6dc5b6dc5e699ac0cc1009878e21d4/fixtures/requirements.txt"
+        },
+        "release": {
+          "sha256": "0aaaa998d2a0b1b67555480ea367d266d10a114b6ce34e90b68865c082e4bbf3",
+          "url": "https://raw.githubusercontent.com/encode/httpx/80960fa31918d7663c3f4c3ad61661cf0e80628f/CHANGELOG.md"
+        },
+        "usage": {
+          "sha256": "0a02be82d6f74586fe780349afa664e69ce2587e9aead0f1210a40be21754d56",
+          "url": "https://raw.githubusercontent.com/haris4587/ReleaseScope/97c856d24d6dc5b6dc5e699ac0cc1009878e21d4/fixtures/application.py"
+        }
+      },
+      "migration": "Update the shown `httpx.Client(proxies=\"http://localhost:8080\")` usage to the supported proxy configuration for httpx 0.28.0 per the upstream SSL/proxy/API docs for that release line. The exact replacement syntax is not provided in the supplied release excerpt, so the concrete code change cannot be confirmed from this evidence alone. At minimum, remove reliance on the `proxies` argument before upgrading.",
+      "reason": "The manifest explicitly pins httpx at 0.27.2, and the usage imports httpx and constructs `httpx.Client(proxies=...)`. The release document is for the declared upstream `httpx` target version 0.28.0 and explicitly states that the deprecated `proxies` argument has been removed. Because shown code uses that removed argument, upgrading from 0.27.2 to 0.28.0 would affect actual demonstrated usage and is a breaking change.",
+      "verdict": "BREAKING_CHANGE"
+    },
+    "integration": {
+      "commit": "97c856d24d6dc5b6dc5e699ac0cc1009878e21d4",
+      "dependency": "httpx",
+      "id": "ledger-demo",
+      "manifest_path": "fixtures/requirements.txt",
+      "owner": "0xcD1305217298eB7a99696EEAB7f5a46b9dE2E441",
+      "repo": "haris4587/ReleaseScope",
+      "upstream": "encode/httpx",
+      "usage_path": "fixtures/application.py",
+      "version": "0.27.2"
+    },
+    "previous_hash": "",
+    "release": {
+      "doc_commit": "80960fa31918d7663c3f4c3ad61661cf0e80628f",
+      "doc_path": "CHANGELOG.md",
+      "id": "httpx-028-demo",
+      "integration_id": "ledger-demo",
+      "target_version": "0.28.0"
+    },
+    "release_id": "httpx-028-demo",
+    "report_hash": "afbca761df1618d2756b9c48621f506d861ceffd2605781db80e4bcfa5647f36",
+    "revision": 1,
+    "supplement": {}
+  },
+  {
+    "challenge_reason": "The first report could not confirm replacement syntax from the changelog alone. Reassess migration using the upstream proxy documentation at this exact release commit. Confirm whether Client(proxy=...) is the appropriate replacement for the shown single-proxy usage; retain or change the impact verdict only as supported by evidence.",
+    "challenger": "0x397cc8EAbD4754E82Dd30f06b333d145D4A9EECC",
+    "decision": {
+      "affected_symbols": [
+        "httpx.Client"
+      ],
+      "citations": [
+        {
+          "quote": "httpx==0.27.2",
+          "source": "manifest"
+        },
+        {
+          "quote": "with httpx.Client(proxies=\"http://localhost:8080\") as client:",
+          "source": "usage"
+        },
+        {
+          "quote": "The deprecated `proxies` argument has now been removed.",
+          "source": "release"
+        },
+        {
+          "quote": "HTTPX supports setting up [HTTP proxies](https://en.wikipedia.org/wiki/Proxy_server#Web_proxy_servers) via the `proxy` parameter to be passed on client initialization",
+          "source": "supplement"
+        }
+      ],
+      "evidence": {
+        "manifest": {
+          "sha256": "eda181fb9517c0421c72a0934b6f88916c810492e6742b01a380748c91ac5377",
+          "url": "https://raw.githubusercontent.com/haris4587/ReleaseScope/97c856d24d6dc5b6dc5e699ac0cc1009878e21d4/fixtures/requirements.txt"
+        },
+        "release": {
+          "sha256": "0aaaa998d2a0b1b67555480ea367d266d10a114b6ce34e90b68865c082e4bbf3",
+          "url": "https://raw.githubusercontent.com/encode/httpx/80960fa31918d7663c3f4c3ad61661cf0e80628f/CHANGELOG.md"
+        },
+        "supplement": {
+          "sha256": "38f3be3b3babe015f9b9878c8ed207144e860a572b5c1dbf8eb7924d4a738960",
+          "url": "https://raw.githubusercontent.com/encode/httpx/80960fa31918d7663c3f4c3ad61661cf0e80628f/docs/advanced/proxies.md"
+        },
+        "usage": {
+          "sha256": "0a02be82d6f74586fe780349afa664e69ce2587e9aead0f1210a40be21754d56",
+          "url": "https://raw.githubusercontent.com/haris4587/ReleaseScope/97c856d24d6dc5b6dc5e699ac0cc1009878e21d4/fixtures/application.py"
+        }
+      },
+      "migration": "Replace the 'proxies' argument with the singular 'proxy' argument in the httpx.Client constructor. The value remains the same for single-proxy usage.",
+      "reason": "Upgrade from httpx 0.27.2 to 0.28.0 involves the removal of the 'proxies' argument in the Client constructor. The usage code explicitly utilizes 'proxies' to define a local proxy, which will result in a TypeError or equivalent failure upon upgrading as the release notes confirm this deprecated argument has now been removed.",
+      "verdict": "BREAKING_CHANGE"
+    },
+    "integration": {
+      "commit": "97c856d24d6dc5b6dc5e699ac0cc1009878e21d4",
+      "dependency": "httpx",
+      "id": "ledger-demo",
+      "manifest_path": "fixtures/requirements.txt",
+      "owner": "0xcD1305217298eB7a99696EEAB7f5a46b9dE2E441",
+      "repo": "haris4587/ReleaseScope",
+      "upstream": "encode/httpx",
+      "usage_path": "fixtures/application.py",
+      "version": "0.27.2"
+    },
+    "previous_hash": "afbca761df1618d2756b9c48621f506d861ceffd2605781db80e4bcfa5647f36",
+    "release": {
+      "doc_commit": "80960fa31918d7663c3f4c3ad61661cf0e80628f",
+      "doc_path": "CHANGELOG.md",
+      "id": "httpx-028-demo",
+      "integration_id": "ledger-demo",
+      "target_version": "0.28.0"
+    },
+    "release_id": "httpx-028-demo",
+    "report_hash": "d1b14e7b7d73e7505557dfbde9f914c0e345eeb90be167b6ae57589ab48d6b82",
+    "revision": 2,
+    "supplement": {
+      "commit": "80960fa31918d7663c3f4c3ad61661cf0e80628f",
+      "path": "docs/advanced/proxies.md"
+    }
+  }
+]

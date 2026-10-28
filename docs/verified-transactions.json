@@ -1,0 +1,86 @@
+{
+  "registration": {
+    "hash": "0xf158937aaece47cf2b065d886a52b712a9837753f0ad74c10b4f5a6782029f04",
+    "status": "FINALIZED",
+    "sender": "0xcD1305217298eB7a99696EEAB7f5a46b9dE2E441",
+    "execution": "SUCCESS",
+    "votes": {
+      "0x045291B293B9D68969c18B6637A8258038cf787A": "agree",
+      "0x0eb3859451817bC25Cc717D4F676D54D0D3aD0aE": "agree",
+      "0x4619C8420D50c9dE477DB2CBb7b4863A041688CB": "idle",
+      "0x4868b172ddEBC18b5219aaCeAB77ae0Df330c83A": "agree",
+      "0x63d72fE364368491E62a42B9C73c317Ce1ca8434": "idle"
+    },
+    "executionMode": "NORMAL"
+  },
+  "release": {
+    "hash": "0x7b357778d52e2db3c23b9d3d00f92d5e3bda95eeb95783957dcf18c306ddd1d6",
+    "status": "FINALIZED",
+    "sender": "0xcD1305217298eB7a99696EEAB7f5a46b9dE2E441",
+    "execution": "SUCCESS",
+    "votes": {
+      "0x0eb3859451817bC25Cc717D4F676D54D0D3aD0aE": "agree",
+      "0x4619C8420D50c9dE477DB2CBb7b4863A041688CB": "agree",
+      "0x5e84e17266a193077728229751aC8A1dD24be146": "agree",
+      "0x63d72fE364368491E62a42B9C73c317Ce1ca8434": "idle",
+      "0x9C182DE7F93AdbE8ee3D62570613eC23c5683cAc": "idle"
+    },
+    "executionMode": "NORMAL"
+  },
+  "frontend_registration": {
+    "hash": "0xe19b5bc2b66fa429854c3750cc5919a80925db120572e3efb0619a6ab78f69a0",
+    "status": "FINALIZED",
+    "sender": "0x397cc8EAbD4754E82Dd30f06b333d145D4A9EECC",
+    "execution": "SUCCESS",
+    "votes": {
+      "0x0eb3859451817bC25Cc717D4F676D54D0D3aD0aE": "agree",
+      "0x4868b172ddEBC18b5219aaCeAB77ae0Df330c83A": "idle",
+      "0x5D9Ee6E9aAF2F0b739314A52dd9Da57cd8866dA8": "agree",
+      "0x5e84e17266a193077728229751aC8A1dD24be146": "idle",
+      "0xb04cdDC4a6Ff6A0aDF715cfe00Fa307b901cebD4": "agree"
+    },
+    "executionMode": "NORMAL"
+  },
+  "assessment": {
+    "hash": "0xa73404ff991ed97b8f1cfa1e57540a874ac3fb684e4c091befd19a52b4a81024",
+    "status": "FINALIZED",
+    "sender": "0xcD1305217298eB7a99696EEAB7f5a46b9dE2E441",
+    "execution": "SUCCESS",
+    "votes": {
+      "0x007d6451555Df7765c707284F844137927aE4e5E": "idle",
+      "0x045291B293B9D68969c18B6637A8258038cf787A": "agree",
+      "0x5847AF34a4e5bA96490f8c883598f68EC9B0B907": "agree",
+      "0xCe0B66448435cA53665C954705Abd753515594Cf": "idle",
+      "0xe06A34A1eBd398AF3399d08593B8c3C433CdD947": "agree"
+    },
+    "executionMode": "NORMAL"
+  },
+  "frontend_release": {
+    "hash": "0x98575d139806938c3e1a36acbd5d7ad5461e33f1870c41e0e098c9a692702198",
+    "status": "FINALIZED",
+    "sender": "0x397cc8EAbD4754E82Dd30f06b333d145D4A9EECC",
+    "execution": "SUCCESS",
+    "votes": {
+      "0x4441Ebe37E72c039B73f1D6CF8C6DEe277FE547a": "agree",
+      "0x4619C8420D50c9dE477DB2CBb7b4863A041688CB": "idle",
+      "0x5847AF34a4e5bA96490f8c883598f68EC9B0B907": "agree",
+      "0x5e84e17266a193077728229751aC8A1dD24be146": "agree",
+      "0xcab45E3fe9cC9592B5C378E47734E022b7Df80c9": "agree"
+    },
+    "executionMode": "NORMAL"
+  },
+  "challenge": {
+    "hash": "0xab7447a71116a50d26798af88a1920bcc9dde524d622aae2cbc7f311ffb6a471",
+    "status": "FINALIZED",
+    "sender": "0x397cc8EAbD4754E82Dd30f06b333d145D4A9EECC",
+    "execution": "SUCCESS",
+    "votes": {
+      "0x4441Ebe37E72c039B73f1D6CF8C6DEe277FE547a": "idle",
+      "0x5847AF34a4e5bA96490f8c883598f68EC9B0B907": "agree",
+      "0x63d72fE364368491E62a42B9C73c317Ce1ca8434": "agree",
+      "0xCe0B66448435cA53665C954705Abd753515594Cf": "agree",
+      "0xb04cdDC4a6Ff6A0aDF715cfe00Fa307b901cebD4": "disagree"
+    },
+    "executionMode": "NORMAL"
+  }
+}

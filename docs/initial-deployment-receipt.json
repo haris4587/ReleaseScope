@@ -1,0 +1,11 @@
+{
+  "hash": "0x78fe6f1a294cae2bdadc2c8b52e4125cb08435d46c87662a3539206f650bf384",
+  "statusName": "FINALIZED",
+  "from_address": "0xcD1305217298eB7a99696EEAB7f5a46b9dE2E441",
+  "to_address": "0x8719F14F3919cB6aB66debe92B542415d9935b05",
+  "execution_mode": "NORMAL",
+  "result_name": "MAJORITY_AGREE",
+  "execution": "SUCCESS",
+  "note": "Initial deployment preceded tested code corrections; use the final recorded code update and source hash for verification.",
+  "source_sha256": "318b32f6f371c79cb0f6698645e6529fdcd6caf1a842bc15850e14ddbe0708cb"
+}

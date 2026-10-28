@@ -1,0 +1,15 @@
+{
+  "network": "studionet",
+  "chainId": 61999,
+  "contractAddress": "0x8719F14F3919cB6aB66debe92B542415d9935b05",
+  "deploymentTransaction": "0x78fe6f1a294cae2bdadc2c8b52e4125cb08435d46c87662a3539206f650bf384",
+  "verified": true,
+  "demoReleaseId": "httpx-028-demo",
+  "demoIntegrationId": "ledger-demo",
+  "fixtureCommit": "97c856d24d6dc5b6dc5e699ac0cc1009878e21d4",
+  "upgradeTransaction": "0x4d61ac8e4b101af686d308288135bd6c0a52d90f9ee3402634d319936112faf9",
+  "contractSourceSha256": "77dace12a18a931f911abe9e08b7266bdec5668a458d01d3f2e0d5b5eabd2a4f",
+  "sourceVerified": true,
+  "assessmentTransaction": "0xa73404ff991ed97b8f1cfa1e57540a874ac3fb684e4c091befd19a52b4a81024",
+  "challengeTransaction": "0xab7447a71116a50d26798af88a1920bcc9dde524d622aae2cbc7f311ffb6a471"
+}

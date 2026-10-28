@@ -1,0 +1,28 @@
+{
+  "name": "releasescope",
+  "version": "1.0.0",
+  "description": "Evidence-backed software upgrade impact verification on GenLayer",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "test": "node --test tests/*.test.js",
+    "check": "python -m unittest discover -s tests -p test_*.py -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haris4587/ReleaseScope.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/haris4587/ReleaseScope/issues"
+  },
+  "homepage": "https://github.com/haris4587/ReleaseScope#readme",
+  "dependencies": {
+    "genlayer-js": "1.1.8",
+    "vite": "8.3.5"
+  }
+}
